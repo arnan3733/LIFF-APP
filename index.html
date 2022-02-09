@@ -14,7 +14,7 @@
     <img id="pictureUrl" src="https://mokmoon.com/images/ic_liff.png" class="rounded-circle">
 
         <ul class="list-group">
-            <li class="list-group-item active"><h5 class="text-center"><b>User Profile</b></p></li>
+            <li class="list-group-item active"><h5 class="text-center">User Profile</h5></li>
             <li class="list-group-item"><p id="userId"><b>User ID: </b></p></li>
             <li class="list-group-item"><p id="displayName"><b>Display Name: </b></p></li>
             <li class="list-group-item"><p id="statusMessage"><b>Status: </b></p></li>
@@ -29,8 +29,8 @@
     </ul>
      <!-- ul>li*3 คำสั่งul li -->
     <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
-    <script>
 
+    <script>
         async function getUserProfile(){
             const profile = await tiff.getProfile()
             document.getElementById("pictureUrl").src = profile.pictureUrl
