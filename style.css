@@ -16,3 +16,7 @@
 }
 
 h1{ font-size: 2rem;}
+#accessToken {
+    display: block;
+    overflow: auto;
+}
