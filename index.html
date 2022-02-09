@@ -16,8 +16,9 @@
         <li class="list-group-item"><p id="version"><b>Version:</b></p></li>
     </ul>
      <!-- ul>li*3 คำสั่งul li -->
-    <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js">
-        function getEnvironment(){
+    <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
+    <script>
+    function getEnvironment(){
             document.getElementById('os').append(liff.getOS()) //แสดงต่อท้ายข้อความล่าสุด
             document.getElementById('language').append(liff.getLanguage()) //แสดงต่อท้ายข้อความล่าสุด
             document.getElementById('version').append(liff.getVersion()) //แสดงต่อท้ายข้อความล่าสุด
@@ -26,6 +27,7 @@
     await liff.init({liffId: "1656875953-mZYRR06D"})//ขอข้อมูล
     getEnvironment()
     }
+    main()
 </script>
 </body>
 </html>
