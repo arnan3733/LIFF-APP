@@ -9,11 +9,13 @@
 </head>
 <body>
     <div class="container">
-    <h1 class="text-center">LiNE - LIFF APP PACC</h1>
+    <h1 class="text-center">LiNE - LIFF APP Arnan</h1>
     <ul class="list-group">
         <li class="list-group-item"><p id="os"><b>OS: </b></p></li>
         <li class="list-group-item"><p id="language"><b>Language: </b></p></li>
         <li class="list-group-item"><p id="version"><b>Version:</b></p></li>
+        <li class="list-group-item"><p id="isInClient"><b>isInClient:</b></p></li>
+        <li class="list-group-item"><p id="accessToken"><b>AccessToken:</b></p></li>
     </ul>
      <!-- ul>li*3 คำสั่งul li -->
     <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
@@ -22,6 +24,8 @@
             document.getElementById('os').append(liff.getOS()) //แสดงต่อท้ายข้อความล่าสุด
             document.getElementById('language').append(liff.getLanguage()) //แสดงต่อท้ายข้อความล่าสุด
             document.getElementById('version').append(liff.getVersion()) //แสดงต่อท้ายข้อความล่าสุด
+            document.getElementById('isInClient').append(liff.isInClient()) //แสดงต่อท้ายข้อความล่าสุด
+            document.getElementById('accessToken').append(liff.getaccessToken()) //แสดงต่อท้ายข้อความล่าสุด
         }
     async function main(){//เรียงข้อมูล
     await liff.init({liffId: "1656875953-mZYRR06D"})//ขอข้อมูล
