@@ -51,6 +51,10 @@
      <!-- ul>li*3 คำสั่งul li -->
      <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
      <script>
+         function logout(){
+             liff.logout();
+             window,location.reload
+         }
          function closed(){
              liff.closeWindow();
          }
