@@ -36,5 +36,8 @@ h1{
 }
 .list-group .active{
     background-color: green;
+    border: 0 none;
+}
+h5{
     font-size: 1rem;
 }
