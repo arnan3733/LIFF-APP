@@ -23,3 +23,6 @@ h1{
     display: block;
     word-wrap: break-word;
 }
+#word-wrap{
+    word-wrap: break-word;
+}
