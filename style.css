@@ -31,7 +31,6 @@ h1{
     font-size: .9rem;
 }
 .list-group-item{
-    height: 40px;
     padding: 10px;
 }
 .list-group .active{

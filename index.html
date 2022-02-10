@@ -33,8 +33,8 @@
                 <li class="list-group-item"><p id="version"><b>SDK Version: </b></p></li>
                 <li class="list-group-item"><p id="isInClient"><b>isInClient: </b></p></li>
                 <li class="list-group-item"><p id="accessToken"><b>AccessToken: </b></p></li>
-                <li class="list-group-item" id="ex1"><p id="viewType"><b>View type: </b></p></li>
                 <li class="list-group-item"><p id="type"><b>Room type: </b></p></li>
+                <li class="list-group-item" id="ex1"><p id="viewType"><b>View type: </b></p></li>
                 <li class="list-group-item" id="ex2"><p id="utouId"><b>utouId: </b></p></li>
                 <li class="list-group-item" id="ex3"><p id="groupId"><b>groupId: </b></p></li>
                 <li class="list-group-item" id="ex4"><p id="roomId"><b>roomId: </b></p></li>
@@ -61,7 +61,19 @@ function getEnvironment(){
     document.getElementById("LineVersion").append(liff.getLineVersion())
 }
 function getContext(){
-    if(liff.getContext().type === "external"){
+    if(liff.getContext().type === "group"){
+        document.getElementById("ex2").style.display = 'none';
+        document.getElementById("ex4").style.display = 'none';
+    }
+    else if(liff.getContext().type === "utou"){
+        document.getElementById("ex3").style.display = 'none';
+        document.getElementById("ex4").style.display = 'none';
+    }
+    else if(liff.getContext().type === "room"){
+        document.getElementById("ex1").style.display = 'none';
+        document.getElementById("ex4").style.display = 'none';
+    }
+    else{
         document.getElementById("ex1").style.display = 'none';
         document.getElementById("ex2").style.display = 'none';
         document.getElementById("ex3").style.display = 'none';
