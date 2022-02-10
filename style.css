@@ -19,13 +19,9 @@ h1{
     font-size: 2rem;
 }
 
-#accessToken, #userId {
+#accessToken, #userId, #utouId, #groupId, #roomId{
     display: block;
     word-wrap: break-word;
-}
-.word-wrap{
-    word-wrap: break-word;
-
 }
 .list-group{
     font-size: .9rem;
