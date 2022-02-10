@@ -54,10 +54,13 @@
          async function sendMsg(){
              await liff.sendMessages([
              {
-            "type": "sticker",
-            "packageId": "446",
-            "stickerId": "1997"
-}
+            // "type": "sticker",
+            // "packageId": "446",
+            // "stickerId": "1997"
+            "type": "image",
+            "originalContentUrl": "https://example.com/original.jpg",
+            "previewImageUrl": "https://example.com/preview.jpg"
+            }
              ])
              alert("Message Sent!");
          }
