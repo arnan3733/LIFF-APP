@@ -26,12 +26,16 @@
             <!-- คีลัด li.list-group-item>p#email -->
 
             <ul class="list-group mt-4">
+                <li class="list-group-item"><h5><b>Environment</b></h5></li>
                 <li class="list-group-item"><p id="os"><b>OS: </b></p></li>
                 <li class="list-group-item"><p id="language"><b>Language: </b></p></li>
+                <li class="list-group-item"><p id="LineVersion"><b>Line Version: </b></p></li>
+                <li class="list-group-item"><p id="type"><b>type: </b></p></li>
+                <li class="list-group-item"><p id="viewtype"><b>Viewtype: </b></p></li>
                 <li class="list-group-item"><p id="version"><b>Version: </b></p></li>
                 <li class="list-group-item"><p id="isInClient"><b>isInClient: </b></p></li>
                 <li class="list-group-item"><p id="accessToken"><b>AccessToken: </b></p></li>
-                <li class="list-group-item"><p id="accessToken"><b>AccessToken: </b></p></li>
+                <!-- <li class="list-group-item"><p id="accessToken"><b>AccessToken: </b></p></li> -->
             </ul>
         </div>
      <!-- ul>li*3 คำสั่งul li -->
@@ -51,12 +55,18 @@ function getEnvironment(){
     document.getElementById("version").append(liff.getVersion())
     document.getElementById("isInClient").append(liff.isInClient())
     document.getElementById("accessToken").append(liff.getAccessToken())
+    document.getElementById("LineVersion").append(liff.getLineVersion())
+}
+function getContext(){
+    document.getElementById("type").append(liff.getContext().type)
+    document.getElementById("viewType").append(liff.getContext().viewType)
 }
 
 async function main(){//เรียงข้อมูล
     await liff.init({liffId:"1656875953-mZYRR06D"})//ขอข้อมูล
     getEnvironment()
     getUserProfile()
+    getContext()
 }
 main()
 </script>
