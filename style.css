@@ -1,6 +1,6 @@
 #pictureUrl {
     margin: 0 auto;
-    width: 32%;
+    width: 30%;
     display: -moz-box;
     display: -webkit-box;
     display: box;
@@ -15,7 +15,10 @@
     border-radius: 256px;
 }
 
-h1{ font-size: 2rem;}
+h1{
+    font-size: 2rem;
+}
+
 #accessToken {
     display: block;
     word-wrap: break-word;
