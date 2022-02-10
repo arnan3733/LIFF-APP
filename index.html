@@ -30,11 +30,14 @@
                 <li class="list-group-item"><p id="os"><b>OS: </b></p></li>
                 <li class="list-group-item"><p id="language"><b>Language: </b></p></li>
                 <li class="list-group-item"><p id="LineVersion"><b>Line Version: </b></p></li>
-                <li class="list-group-item"><p id="type"><b>type: </b></p></li>
-                <li class="list-group-item"><p id="viewtype"><b>Viewtype: </b></p></li>
-                <li class="list-group-item"><p id="version"><b>Version: </b></p></li>
+                <li class="list-group-item"><p id="type"><b>Room type: </b></p></li>
+                <li class="list-group-item"><p id="version"><b>SDK Version: </b></p></li>
                 <li class="list-group-item"><p id="isInClient"><b>isInClient: </b></p></li>
                 <li class="list-group-item"><p id="accessToken"><b>AccessToken: </b></p></li>
+                <li class="list-group-item"><p id="viewtype"><b>View type: </b></p></li>
+                <li class="list-group-item"><p id="utouId"><b>utouId: </b></p></li>
+                <li class="list-group-item"><p id="groupId"><b>groupId: </b></p></li>
+                <li class="list-group-item"><p id="roomId"><b>roomId: </b></p></li>
                 <!-- <li class="list-group-item"><p id="accessToken"><b>AccessToken: </b></p></li> -->
             </ul>
         </div>
@@ -59,7 +62,10 @@ function getEnvironment(){
 }
 function getContext(){
     document.getElementById("type").append(liff.getContext().type)
-    document.getElementById("viewType").append(liff.getContext().viewType)
+    document.getElementById("viewtype").append(liff.getContext().viewType)
+    document.getElementById("utouId").append(liff.getContext().utouId)
+    document.getElementById("groupId").append(liff.getContext().groupId)
+    document.getElementById("roomId").append(liff.getContext().roomId)
 }
 
 async function main(){//เรียงข้อมูล
