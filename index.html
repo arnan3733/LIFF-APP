@@ -44,7 +44,7 @@
 
             <div class="mt-4">
             <button class="btn btn-dark col-12" id="btnMsg" onclick="sendMsg()">Send</button>
-            <button class="btn btn-secondary col-12 mt-2" id="btbLogout" onclick="logout()">Logout</button></div>
+            <button class="btn btn-secondary col-12 mt-2" id="btnLogout" onclick="logout()">Logout</button></div>
             <button class="btn btn-warning col-12 mt-2" id="btnClose" onclick="closed()">Close</button>
         </div>
 
@@ -73,8 +73,15 @@ function getEnvironment(){
     document.getElementById("isInClient").append(liff.isInClient())
     document.getElementById("accessToken").append(liff.getAccessToken())
     document.getElementById("LineVersion").append(liff.getLineVersion())
+    if(liff.isInClient())
+    {
+    document.getElementById("btnLogout").style.display = "none"
+    }
+    else{
+        document.getElementById("btnClose").style.display = "none"
+    }
 }
-function getContext(){
+    function getContext(){
     if(liff.getContext().type === "group"){
         document.getElementById("ex2").style.display = 'none';
         document.getElementById("ex4").style.display = 'none';
